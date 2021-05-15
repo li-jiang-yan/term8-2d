@@ -44,6 +44,12 @@ public:
     unsigned char get_rc_command();
 
 private:
+
+    /**
+    * @brief: find index of maximum value in array
+    */
+    int max_index(int arr[]);
+    
     /**
     * @brief: find index of minimum value in array
     */
