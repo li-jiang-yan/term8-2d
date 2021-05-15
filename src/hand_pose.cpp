@@ -222,11 +222,14 @@ Result HandPose::Postprocess(cv::Mat& origImage, aclmdlDataset* modelOutput) {
     // get rc_command index from keypoints and add to presenter server string
     int rc_command = int(handposeDecode_.get_rc_command());
     switch(rc_command){
-        case 0: one_result.result_text.append("STOP"); break;
-        case 1: one_result.result_text.append("FORWARD"); break;
-        case 2: one_result.result_text.append("BACKWARD"); break;
-        case 3: one_result.result_text.append("RIGHT"); break;
-        case 4: one_result.result_text.append("LEFT"); break;
+        case 0: one_result.result_text.append("NULL"); break;
+        case 1: one_result.result_text.append("ONE"); break;
+        case 2: one_result.result_text.append("TWO"); break;
+        case 3: one_result.result_text.append("THREE"); break;
+        case 4: one_result.result_text.append("FOUR"); break;
+        case 5: one_result.result_text.append("FIVE"); break;
+        case 6: one_result.result_text.append("BAD"); break;
+        case 7: one_result.result_text.append("GOOD"); break;
     }
 
     // delimiter to seperate text and coordinates
